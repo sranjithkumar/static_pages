@@ -2,9 +2,10 @@
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
-    <%= stylesheet_link_tag 'application', media: 'all',
-                                           'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link data-turbolinks-track="true" href="/assets/custom.css?body=1" media="all" rel="stylesheet">
+    <link data-turbolinks-track="true" href="/assets/static_pages.css?body=1" media="all" rel="stylesheet">
+    <link data-turbolinks-track="true" href="/assets/application.css?body=1" media="all" rel="stylesheet">
+    <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
        <%= render 'layouts/shim' %>
   </head>
@@ -12,7 +13,7 @@
     <%= render 'layouts/header' %>
     <div class="container">
       <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
