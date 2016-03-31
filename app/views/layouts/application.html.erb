@@ -2,20 +2,20 @@
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
-    <link data-turbolinks-track="true" href="/assets/custom.css?body=1" media="all" rel="stylesheet">
+    <!-- <link data-turbolinks-track="true" href="/assets/custom.css?body=1" media="all" rel="stylesheet">
     <link data-turbolinks-track="true" href="/assets/static_pages.css?body=1" media="all" rel="stylesheet">
-    <link data-turbolinks-track="true" href="/assets/application.css?body=1" media="all" rel="stylesheet">
-    <%#= stylesheet_link_tag 'application', media: 'all',
+    <link data-turbolinks-track="true" href="/assets/application.css?body=1" media="all" rel="stylesheet"> -->
+    <%= stylesheet_link_tag 'application', media: 'all',
                                            'data-turbolinks-track' => true %>
-    <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script><style type="text/css"></style>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!-- <script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script><style type="text/css"></style>
     <script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
     <script data-turbolinks-track="true" src="/assets/bootstrap.js?body=1"></script>
     <script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
     <script data-turbolinks-track="true" src="/assets/sessions.js?body=1"></script>
     <script data-turbolinks-track="true" src="/assets/static_pages.js?body=1"></script>
     <script data-turbolinks-track="true" src="/assets/users.js?body=1"></script>
-    <script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
+    <script data-turbolinks-track="true" src="/assets/application.js?body=1"></script> -->
     <%= csrf_meta_tags %>
        <%= render 'layouts/shim' %>
   </head>
