@@ -1,4 +1,9 @@
 ranjith:
-  name: Ranjith Kumar
+  name: Ranjith
   email: ranjith@juhomi.com
+  password_digest: <%= User.digest('password') %>
+
+kumar:
+  name: Kumar
+  email: kumar@juhomi.com
   password_digest: <%= User.digest('password') %>
